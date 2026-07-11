@@ -1,0 +1,66 @@
+{
+  "claim": "QAOA rivals classical solvers on healthcare combinatorial optimization (nurse scheduling).",
+  "config": {
+    "backend": "sampler simulator",
+    "optimizer": "COBYLA(100)",
+    "qaoa_reps": 2,
+    "quality_metric": "(random-cost)/(random-optimal), 1.0=optimal",
+    "sizes": [
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "experiment": "exp2_qaoa_optimization",
+  "rows": [
+    {
+      "n_vars": 4,
+      "optimal_cost": -7.0627,
+      "qaoa_cost": -7.0627,
+      "qaoa_hit_optimum": true,
+      "qaoa_quality": 1.0,
+      "qaoa_time_s": 3.296,
+      "random_cost": -7.0627,
+      "sa_cost": -7.0627,
+      "sa_hit_optimum": true,
+      "sa_quality": 1.0
+    },
+    {
+      "n_vars": 6,
+      "optimal_cost": -4.4433,
+      "qaoa_cost": -4.4433,
+      "qaoa_hit_optimum": true,
+      "qaoa_quality": 1.0,
+      "qaoa_time_s": 6.056,
+      "random_cost": -4.4433,
+      "sa_cost": -4.4433,
+      "sa_hit_optimum": true,
+      "sa_quality": 1.0
+    },
+    {
+      "n_vars": 8,
+      "optimal_cost": -5.4981,
+      "qaoa_cost": -5.0506,
+      "qaoa_hit_optimum": false,
+      "qaoa_quality": 0.9913,
+      "qaoa_time_s": 49.516,
+      "random_cost": -5.4981,
+      "sa_cost": -5.4981,
+      "sa_hit_optimum": true,
+      "sa_quality": 1.0
+    },
+    {
+      "n_vars": 10,
+      "optimal_cost": -8.5091,
+      "qaoa_cost": -4.2404,
+      "qaoa_hit_optimum": false,
+      "qaoa_quality": 0.9423,
+      "qaoa_time_s": 1151.142,
+      "random_cost": -6.7974,
+      "sa_cost": -8.5091,
+      "sa_hit_optimum": true,
+      "sa_quality": 1.0
+    }
+  ]
+}

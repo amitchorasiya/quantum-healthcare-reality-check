@@ -1,0 +1,30 @@
+flowchart TB
+    subgraph DATA[Data layer]
+        D1[make_cohort.py<br/>synthetic patients, fixed seed] --> D2[(cohort.csv)]
+    end
+    subgraph EXP[Experiment layer]
+        E1[exp1: quantum kernel<br/>Qiskit statevector]
+        E2[exp2: QAOA<br/>Qiskit algorithms]
+        E3[exp3: QCBM<br/>PennyLane]
+    end
+    subgraph OUT[Results]
+        R1[(results/*.json)]
+    end
+    subgraph AI[Analysis layer]
+        A1[quantum_analyst<br/>Claude, or offline rule]
+    end
+    subgraph SHOW[Presentation]
+        P1[make_plots.py<br/>charts]
+        P2[verdict_cards.json]
+    end
+    DRV[run_all.py<br/>one-command driver] --> DATA
+    D2 --> E1 & E2 & E3
+    E1 & E2 & E3 --> R1
+    R1 --> A1 --> P2
+    R1 --> P1
+
+    style DATA fill:#E3F2FD,stroke:#1565C0
+    style EXP fill:#EDE7F6,stroke:#4527A0
+    style AI fill:#FFF8E1,stroke:#F9A825
+    style SHOW fill:#E8F5E9,stroke:#2E7D32
+    style DRV fill:#ECEFF1,stroke:#37474F

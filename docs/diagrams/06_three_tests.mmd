@@ -1,0 +1,19 @@
+flowchart LR
+    Q[Quantum: does it<br/>beat classical?] --> T1
+    Q --> T2
+    Q --> T3
+    subgraph T1[Test 1: small data]
+        A1[Rare-disease-like<br/>tiny dataset] --> B1[Quantum kernel<br/>vs tuned classical]
+        B1 --> C1[Result: Hype<br/>0.52 vs 0.79 AUC]
+    end
+    subgraph T2[Test 2: scheduling]
+        A2[Nurse shifts<br/>as a puzzle] --> B2[QAOA<br/>vs annealing]
+        B2 --> C2[Result: Mixed<br/>slow, no edge]
+    end
+    subgraph T3[Test 3: generator]
+        A3[Learn a data<br/>pattern] --> B3[Quantum QCBM<br/>vs classical]
+        B3 --> C3[Result: Hype<br/>24 vs 17 params]
+    end
+    style C1 fill:#FFEBEE,stroke:#C62828
+    style C2 fill:#FFF3E0,stroke:#E65100
+    style C3 fill:#FFEBEE,stroke:#C62828

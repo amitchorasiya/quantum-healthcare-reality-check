@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant U as You
+    participant R as run_all.py
+    participant D as make_cohort
+    participant E as experiment.run()
+    participant S as Simulator (Qiskit/PennyLane)
+    participant A as quantum_analyst
+    U->>R: python run_all.py
+    R->>D: generate cohort
+    D-->>R: cohort.csv
+    loop each of 3 experiments
+        R->>E: run(quick=False)
+        E->>S: run circuits (quantum) + fit classical
+        S-->>E: measurements / scores
+        E-->>R: results/expN.json
+    end
+    R->>A: read results
+    A-->>R: verdict_cards.json
+    R-->>U: charts + verdicts

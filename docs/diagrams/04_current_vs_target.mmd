@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph TODAY[Current state: all classical]
+        direction TB
+        C1[Data or problem] --> C2[Classical computer<br/>SVM, XGBoost, solver]
+        C2 --> C3[Answer]
+    end
+
+    subgraph FUTURE[Target state: hybrid quantum-classical]
+        direction TB
+        F1[Data or problem] --> F2[Classical computer<br/>does most of the work]
+        F2 --> F3[Quantum computer<br/>does one hard piece]
+        F3 --> F2
+        F2 --> F4[Answer]
+    end
+
+    TODAY -.wins today.-> WIN[Classical still wins<br/>on these tasks]
+    FUTURE -.someday.-> HOPE[Quantum helps<br/>when hardware is quieter]
+
+    style TODAY fill:#E8F5E9,stroke:#2E7D32
+    style FUTURE fill:#EDE7F6,stroke:#4527A0
+    style WIN fill:#E8F5E9,stroke:#2E7D32
+    style HOPE fill:#EDE7F6,stroke:#4527A0

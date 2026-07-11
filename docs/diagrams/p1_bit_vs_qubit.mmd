@@ -1,0 +1,12 @@
+flowchart LR
+    subgraph CL[Normal computer]
+        B1[A bit is 0<br/>or 1. Pick one.]
+    end
+    subgraph QC[Quantum computer]
+        Q1[A qubit is a blend<br/>of 0 and 1 at once.<br/>Like a spinning coin<br/>before it lands.]
+    end
+    CL -->|add a bit| CL2[2 bits = 4 combos,<br/>checked one at a time]
+    QC -->|add a qubit| QC2[10 qubits explore<br/>1,024 combos together.<br/>300 qubits: more than<br/>atoms in the universe.]
+    style CL fill:#E8F5E9,stroke:#2E7D32
+    style QC fill:#EDE7F6,stroke:#4527A0
+    style QC2 fill:#EDE7F6,stroke:#4527A0

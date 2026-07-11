@@ -1,0 +1,14 @@
+flowchart TD
+    A[Nurse manager opens spreadsheet] --> B[List shifts to fill<br/>days, nights, weekends]
+    B --> C[Check each nurse:<br/>hours, skills, time-off, law limits]
+    C --> D{Conflicts?<br/>double-booked,<br/>overtime, gaps}
+    D -->|Yes| E[Manually shuffle by hand]
+    E --> C
+    D -->|No| F[Publish schedule]
+    F --> G{Someone calls in sick}
+    G -->|Yes| E
+    G -->|No| H[Schedule holds this week]
+
+    style A fill:#E3F2FD,stroke:#1565C0
+    style E fill:#FFEBEE,stroke:#C62828
+    style H fill:#E8F5E9,stroke:#2E7D32

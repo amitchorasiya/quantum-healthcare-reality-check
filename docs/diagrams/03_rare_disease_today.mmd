@@ -1,0 +1,15 @@
+flowchart TD
+    A[Patient has vague symptoms] --> B[Family doctor]
+    B --> C{Common cause?}
+    C -->|Assume yes| D[Treat the common thing]
+    D --> E{Better?}
+    E -->|No| F[Refer to specialist 1]
+    F --> G[Tests, wait, repeat]
+    G --> H[Specialist 2, 3, 4 ...]
+    H --> I[Years pass on average]
+    I --> J[Finally: rare disease named]
+    E -->|Yes but wrong| I
+
+    style A fill:#E3F2FD,stroke:#1565C0
+    style I fill:#FFEBEE,stroke:#C62828
+    style J fill:#E8F5E9,stroke:#2E7D32

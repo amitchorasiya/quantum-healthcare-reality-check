@@ -1,0 +1,32 @@
+{
+  "config": {
+    "classical_grid": "tuned RBF-SVM + XGBoost, best of the two",
+    "n_features": 4,
+    "n_seeds": 5,
+    "n_test": 300,
+    "n_train": 120,
+    "quantum_grid": "featuremap in {z,zz} x reps{1,2,3} x entanglement{linear,full} x C{0.5,1,5,20}"
+  },
+  "experiment": "exp4_fair_fight",
+  "question": "If we tune the quantum kernel like classical AND give it a home-field problem, does it win?",
+  "rows": [
+    {
+      "classical_auc_std": 0.0242,
+      "classical_tuned_auc": 0.7652,
+      "dataset": "smooth_cohort",
+      "example_best_cfg": "('z', 1, 'linear', 1)",
+      "quantum_auc_std": 0.0406,
+      "quantum_tuned_auc": 0.7096,
+      "quantum_won": false
+    },
+    {
+      "classical_auc_std": 0.0285,
+      "classical_tuned_auc": 0.664,
+      "dataset": "quantum_favorable",
+      "example_best_cfg": "('zz', 1, 'linear', 0.5)",
+      "quantum_auc_std": 0.0466,
+      "quantum_tuned_auc": 0.5529,
+      "quantum_won": false
+    }
+  ]
+}

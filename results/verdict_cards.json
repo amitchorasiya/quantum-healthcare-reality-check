@@ -1,0 +1,32 @@
+{
+  "exp1_small_data_kernel": {
+    "headline": "Quantum kernel tops out at AUC 0.52; tuned classical reaches 0.79.",
+    "claim_tested": "Quantum kernels outperform classical models in the small-data regime (rare-disease cohorts).",
+    "what_we_found": "Across every training size the quantum-kernel SVM stayed near chance (AUC max 0.52) while tuned RBF-SVM/XGBoost climbed to 0.79.",
+    "verdict": "HYPE",
+    "why": "The generic ZZ feature-map kernel concentrates and fails to separate classes here.",
+    "caveats": "Noiseless simulator, one synthetic cohort, off-the-shelf feature map (no kernel tuning).",
+    "for_a_beginner": "A quantum 'similarity measure' is not automatically better; a well-tuned classical model won easily.",
+    "_source": "rule_based_fallback (no ANTHROPIC_API_KEY)"
+  },
+  "exp2_qaoa_optimization": {
+    "headline": "QAOA is near-optimal but slow; classical annealing matches it instantly.",
+    "claim_tested": "QAOA rivals classical solvers on healthcare combinatorial optimization (nurse scheduling).",
+    "what_we_found": "QAOA hit the exact optimum on 2/4 instances vs 4/4 for simulated annealing, and took up to 1151s on the simulator.",
+    "verdict": "MIXED",
+    "why": "QAOA reaches good solutions but offers no speed or quality edge over a cheap classical solver at these sizes.",
+    "caveats": "Tiny problem sizes, simulated (noiseless) QAOA; real hardware would be noisier and slower.",
+    "for_a_beginner": "Quantum optimization can find good answers, but here a standard classical method was faster and just as good.",
+    "_source": "rule_based_fallback (no ANTHROPIC_API_KEY)"
+  },
+  "exp3_generative_efficiency": {
+    "headline": "Quantum generator needs 24 params vs 17 classical \u2014 no efficiency win.",
+    "claim_tested": "Quantum generators (QCBM) reach target distribution fidelity with far fewer parameters than classical generators.",
+    "what_we_found": "The QCBM reached the target fidelity with 24 parameters; the classical model did it with 17. Comparable, with classical slightly leaner.",
+    "verdict": "HYPE",
+    "why": "The headline 'quantum needs far fewer parameters' claim did not reproduce on this task.",
+    "caveats": "Small 16-category distribution, noiseless simulator; results may differ at larger scale.",
+    "for_a_beginner": "The famous 'quantum uses way fewer parameters' result did not hold up on a simple, fair test.",
+    "_source": "rule_based_fallback (no ANTHROPIC_API_KEY)"
+  }
+}

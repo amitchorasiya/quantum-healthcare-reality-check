@@ -1,0 +1,14 @@
+flowchart TD
+    A[Real-world problem<br/>schedule, diagnosis, molecule] --> B[Turn it into math<br/>a circuit or a cost function]
+    B --> C[Quantum computer or simulator<br/>runs the circuit]
+    C --> D[Measure the qubits<br/>get a noisy answer]
+    D --> E[Classical computer<br/>checks and refines]
+    E --> F{Good enough?}
+    F -->|No| C
+    F -->|Yes| G[Final answer]
+    G --> H[AI writes it up<br/>in plain English]
+
+    style A fill:#E3F2FD,stroke:#1565C0
+    style C fill:#EDE7F6,stroke:#4527A0
+    style E fill:#E8F5E9,stroke:#2E7D32
+    style H fill:#FFF8E1,stroke:#F9A825

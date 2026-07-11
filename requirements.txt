@@ -1,0 +1,27 @@
+# Quantum Healthcare Reality Check — pinned to a working set on Python 3.11–3.14.
+# Everything runs on local simulators; no quantum hardware or API key required.
+
+# Quantum
+qiskit>=2.0
+qiskit-machine-learning>=0.9
+qiskit-algorithms>=0.4
+qiskit-optimization>=0.7
+pennylane>=0.40
+
+# Classical ML baselines
+scikit-learn>=1.4
+xgboost>=2.0          # needs OpenMP at runtime: `brew install libomp` on macOS
+dimod>=0.12           # simulated annealing baseline
+
+# Generative-AI analyst layer (optional; falls back to offline analyzer)
+anthropic>=0.40
+
+# Data / plotting
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.8
+
+# Security pin: setuptools <83.0.0 has CVE-2026-59890 (Unicode handling).
+# Pulled in transitively by qiskit-machine-learning; pin the patched version.
+setuptools>=83.0.0

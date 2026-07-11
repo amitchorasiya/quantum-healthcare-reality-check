@@ -1,0 +1,10 @@
+flowchart TB
+    A[Two patients' data<br/>x and y] --> B[Encode each into<br/>a quantum circuit]
+    B --> C[Run circuit that<br/>compares them]
+    C --> D[Measure: chance of<br/>all-zeros = similarity]
+    D --> E[Similarity number<br/>goes into a table]
+    E --> F[Normal classifier SVM<br/>uses the table to decide]
+    F --> G{Sick or not?}
+    style B fill:#EDE7F6,stroke:#4527A0
+    style C fill:#EDE7F6,stroke:#4527A0
+    style F fill:#E8F5E9,stroke:#2E7D32

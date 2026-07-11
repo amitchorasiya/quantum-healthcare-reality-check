@@ -1,0 +1,105 @@
+{
+  "claim": "Quantum kernels outperform classical models in the small-data regime (rare-disease cohorts).",
+  "config": {
+    "backend": "statevector simulator",
+    "feature_map": "ZZFeatureMap(reps=2, linear)",
+    "n_qubits": 6,
+    "n_seeds": 5,
+    "test_size": 300,
+    "train_sizes": [
+      30,
+      50,
+      80,
+      120,
+      200,
+      400,
+      800
+    ]
+  },
+  "experiment": "exp1_small_data_kernel",
+  "models": [
+    "quantum_kernel_svm",
+    "rbf_svm_tuned",
+    "xgboost",
+    "logreg"
+  ],
+  "rows": [
+    {
+      "logreg_auc": 0.5428,
+      "logreg_ci": 0.0282,
+      "n_train": 30,
+      "quantum_kernel_svm_auc": 0.4968,
+      "quantum_kernel_svm_ci": 0.0278,
+      "rbf_svm_tuned_auc": 0.6317,
+      "rbf_svm_tuned_ci": 0.0085,
+      "xgboost_auc": 0.6169,
+      "xgboost_ci": 0.0581
+    },
+    {
+      "logreg_auc": 0.5891,
+      "logreg_ci": 0.0369,
+      "n_train": 50,
+      "quantum_kernel_svm_auc": 0.5106,
+      "quantum_kernel_svm_ci": 0.0399,
+      "rbf_svm_tuned_auc": 0.6858,
+      "rbf_svm_tuned_ci": 0.0315,
+      "xgboost_auc": 0.6584,
+      "xgboost_ci": 0.044
+    },
+    {
+      "logreg_auc": 0.6094,
+      "logreg_ci": 0.0292,
+      "n_train": 80,
+      "quantum_kernel_svm_auc": 0.4856,
+      "quantum_kernel_svm_ci": 0.0325,
+      "rbf_svm_tuned_auc": 0.7311,
+      "rbf_svm_tuned_ci": 0.0363,
+      "xgboost_auc": 0.6973,
+      "xgboost_ci": 0.0135
+    },
+    {
+      "logreg_auc": 0.6222,
+      "logreg_ci": 0.0164,
+      "n_train": 120,
+      "quantum_kernel_svm_auc": 0.5216,
+      "quantum_kernel_svm_ci": 0.02,
+      "rbf_svm_tuned_auc": 0.7507,
+      "rbf_svm_tuned_ci": 0.017,
+      "xgboost_auc": 0.7263,
+      "xgboost_ci": 0.0304
+    },
+    {
+      "logreg_auc": 0.6201,
+      "logreg_ci": 0.0133,
+      "n_train": 200,
+      "quantum_kernel_svm_auc": 0.5218,
+      "quantum_kernel_svm_ci": 0.0446,
+      "rbf_svm_tuned_auc": 0.7513,
+      "rbf_svm_tuned_ci": 0.0126,
+      "xgboost_auc": 0.7254,
+      "xgboost_ci": 0.0392
+    },
+    {
+      "logreg_auc": 0.6252,
+      "logreg_ci": 0.0401,
+      "n_train": 400,
+      "quantum_kernel_svm_auc": 0.4958,
+      "quantum_kernel_svm_ci": 0.026,
+      "rbf_svm_tuned_auc": 0.7805,
+      "rbf_svm_tuned_ci": 0.0298,
+      "xgboost_auc": 0.7727,
+      "xgboost_ci": 0.0202
+    },
+    {
+      "logreg_auc": 0.6332,
+      "logreg_ci": 0.025,
+      "n_train": 800,
+      "quantum_kernel_svm_auc": 0.5022,
+      "quantum_kernel_svm_ci": 0.0432,
+      "rbf_svm_tuned_auc": 0.7906,
+      "rbf_svm_tuned_ci": 0.0142,
+      "xgboost_auc": 0.7783,
+      "xgboost_ci": 0.0128
+    }
+  ]
+}

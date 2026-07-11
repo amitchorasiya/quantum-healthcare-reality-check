@@ -1,0 +1,12 @@
+flowchart LR
+    P[Manual scheduling] --> Q[Hours of manager time<br/>every week]
+    P --> R[Overtime and agency<br/>staff to plug gaps]
+    P --> S[Burnout from<br/>bad shift patterns]
+    Q --> T[Higher cost]
+    R --> T
+    S --> U[Nurses quit]
+    U --> V[Worse patient care]
+    T --> V
+
+    style P fill:#FFF3E0,stroke:#E65100
+    style V fill:#FFEBEE,stroke:#C62828

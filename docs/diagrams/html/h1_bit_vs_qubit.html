@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+  :root{--ink:#1a1a2e;--muted:#5b5b74;--q:#6b3df5;--qbg:#efeafe;--c:#0f9d76;--cbg:#e6f7f1;}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+  body{background:#fff;padding:40px;}
+  .card{width:1040px;background:#fff;padding:44px 48px;border-radius:20px;}
+  h2{font-size:30px;color:var(--ink);margin-bottom:6px;letter-spacing:-.5px;}
+  .sub{font-size:17px;color:var(--muted);margin-bottom:32px;}
+  .row{display:flex;gap:24px;}
+  .col{flex:1;border-radius:16px;padding:28px;}
+  .col.classical{background:var(--cbg);border:1px solid #bce8d9;}
+  .col.quantum{background:var(--qbg);border:1px solid #d6c9fb;}
+  .tag{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;}
+  .classical .tag{color:var(--c);}
+  .quantum .tag{color:var(--q);}
+  .big{font-size:21px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:18px;}
+  .note{font-size:16px;color:var(--muted);line-height:1.5;}
+  .scale{margin-top:30px;background:#faf9ff;border:1px solid #eae6fb;border-radius:14px;padding:22px 26px;}
+  .scale .line{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px dashed #e3ddf6;font-size:17px;}
+  .scale .line:last-child{border-bottom:none;}
+  .scale .q{color:var(--muted);}
+  .scale .v{font-weight:700;color:var(--ink);}
+  .scale .v.wow{color:var(--q);}
+</style></head><body>
+<div class="card">
+  <h2>One bit vs one qubit</h2>
+  <div class="sub">The whole idea, in one picture. No physics required.</div>
+  <div class="row">
+    <div class="col classical">
+      <div class="tag">Normal computer</div>
+      <div class="big">A bit is 0 or 1. You pick one.</div>
+      <div class="note">Two bits give four combinations, and the computer checks them one at a time.</div>
+    </div>
+    <div class="col quantum">
+      <div class="tag">Quantum computer</div>
+      <div class="big">A qubit is a blend of 0 and 1 at once, like a spinning coin before it lands.</div>
+      <div class="note">Add qubits and the space it can hold explodes.</div>
+    </div>
+  </div>
+  <div class="scale">
+    <div class="line"><span class="q">10 qubits</span><span class="v">1,024 combinations, together</span></div>
+    <div class="line"><span class="q">60 qubits</span><span class="v">more than seconds since the Big Bang</span></div>
+    <div class="line"><span class="q">300 qubits</span><span class="v wow">more than atoms in the universe</span></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,80 @@
+{
+  "claim": "Quantum generators (QCBM) reach target distribution fidelity with far fewer parameters than classical generators.",
+  "classical_rows": [
+    {
+      "kl": 0.0,
+      "n_params": 17,
+      "rank": 1,
+      "tvd": 0.0008
+    },
+    {
+      "kl": 0.0,
+      "n_params": 34,
+      "rank": 2,
+      "tvd": 0.0006
+    },
+    {
+      "kl": 0.0,
+      "n_params": 68,
+      "rank": 4,
+      "tvd": 0.0005
+    },
+    {
+      "kl": 0.0,
+      "n_params": 136,
+      "rank": 8,
+      "tvd": 0.0006
+    },
+    {
+      "kl": 0.0,
+      "n_params": 272,
+      "rank": 16,
+      "tvd": 0.0005
+    }
+  ],
+  "config": {
+    "backend": "pennylane default.qubit",
+    "metric": "KL(target||model), lower=better",
+    "n_categories": 16,
+    "n_qubits": 4,
+    "steps": 200,
+    "target_kl": 0.05
+  },
+  "experiment": "exp3_generative_efficiency",
+  "params_to_reach_target": {
+    "classical": 17,
+    "quantum": 24
+  },
+  "quantum_rows": [
+    {
+      "kl": 0.5685,
+      "layers": 1,
+      "n_params": 8,
+      "tvd": 0.4611
+    },
+    {
+      "kl": 0.4621,
+      "layers": 2,
+      "n_params": 16,
+      "tvd": 0.4251
+    },
+    {
+      "kl": 0.0001,
+      "layers": 3,
+      "n_params": 24,
+      "tvd": 0.0018
+    },
+    {
+      "kl": 0.0,
+      "layers": 4,
+      "n_params": 32,
+      "tvd": 0.0
+    },
+    {
+      "kl": 0.0,
+      "layers": 6,
+      "n_params": 48,
+      "tvd": 0.0
+    }
+  ]
+}

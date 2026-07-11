@@ -1,0 +1,11 @@
+flowchart LR
+    subgraph SIM[Repo 1: reality-check]
+        S1[3 full experiments<br/>on a simulator] --> S2[Verdicts:<br/>HYPE / MIXED / HYPE]
+    end
+    subgraph HW[Repo 2: hardware]
+        H1[Same 3 tests,<br/>shrunk to tiny circuits] --> H2[Run on real IBM QPU<br/>ibm_fez, 156 qubits]
+        H2 --> H3[Measure noise gap<br/>vs perfect simulator]
+    end
+    SIM -->|follow-up question:<br/>what about real hardware?| HW
+    style SIM fill:#E8F5E9,stroke:#2E7D32
+    style HW fill:#EDE7F6,stroke:#4527A0
